@@ -1,17 +1,27 @@
+import math
+from fractions import Fraction as F
+
 def decimal_to_prob(d):
-    pass
+    return 1/d
 
 def prob_to_decimal(p):
-    pass
+    return 1/p
 
 def prob_to_odds(p):
-    pass
+    return (p/(1-p))
 
 def odds_to_prob(o):
-    pass
+    return (o/(o+1))
 
 def logit(p):
-    pass
+    return math.log(p/(1-p))
 
 def sigmoid(z):
-    pass
+    return (1/(1+pow(math.e,-z))) 
+
+def fractional_to_decimal(a, b):
+    x = F(a,b)
+    return float(x)
+
+def decimal_to_fractional(d):
+    return F(d)
